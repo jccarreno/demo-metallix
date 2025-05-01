@@ -1,0 +1,38 @@
+spring:
+  main:
+    lazy-initialization: true
+  datasource:
+    hikari:
+      maximum-pool-size: 30
+      connection-timeout: 20000
+      idle-timeout: 300000
+      max-lifetime: 1800000
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/metallix_demo?createDatabaseIfNotExist=true&useUnicode=yes&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: admin
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false # Facilita la lectura del SQL en los logs
+        use_sql_comments: false # Agrega comentarios SQL a los logs
+        show_sql: false # Muestra SQL generado en los logs
+        order_inserts: true
+        order_updates: true
+        jdbc:
+          batch_size: 100
+          batch_versioned_data: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+cloud:
+  cors:
+    origins: localhost:3000, http://localhost:3000, https://localhost:3000, https://gobernacion-pagos-test-app-front-770455672059.us-east4.run.app
+  buckets:
+    docs: bayport-verificador-bucket-docs-test
+    ocr: bayport-verificacion-ocr-test
+    templates: bayport-bucket-extraction-templates-test
