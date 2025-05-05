@@ -1,0 +1,197 @@
+{
+    "requests": [
+      {
+        "rois": [
+          null
+        ],
+        "fieldConfigs": [
+          {
+            "type": "KEY_VALUE",
+            "fieldConfig": {
+              "expansionType": "NAIVE",
+              "checkText": true,
+              "formatEndOfLine": true
+            }
+          }
+        ],
+        "requestedFields": [
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "Au",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Au",
+                    "AU"
+                  ],
+                  "sizeTransform": {
+                    "up": -1,
+                    "down": 1,
+                    "left": 1.2,
+                    "right": 1.2
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "Ag",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Ag",
+                    "AG"
+                  ],
+                  "sizeTransform": {
+                    "up": -1,
+                    "down": 1,
+                    "left": 1.2,
+                    "right": 1.2
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "Pt",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Pt",
+                    "PT"
+                  ],
+                  "sizeTransform": {
+                    "up": -1,
+                    "down": 1,
+                    "left": 1.2,
+                    "right": 1.2
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "Pd",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Pd",
+                    "PD"
+                  ],
+                  "sizeTransform": {
+                    "up": -1,
+                    "down": 1,
+                    "left": 1.2,
+                    "right": 1.2
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "Rh",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Rh",
+                    "RH"
+                  ],
+                  "sizeTransform": {
+                    "up": -1,
+                    "down": 1,
+                    "left": 1.2,
+                    "right": 1.2
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "Ru",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Ru",
+                    "RU"
+                  ],
+                  "sizeTransform": {
+                    "up": -1,
+                    "down": 1,
+                    "left": 1.2,
+                    "right": 1.2
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "Ir",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Ir",
+                    "IR"
+                  ],
+                  "sizeTransform": {
+                    "up": -1,
+                    "down": 1,
+                    "left": 1.2,
+                    "right": 1.2
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "Cu",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Cu",
+                    "CU"
+                  ],
+                  "sizeTransform": {
+                    "up": -1,
+                    "down": 1,
+                    "left": 1.2,
+                    "right": 1.2
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          }
+        ]
+      }
+    ]
+  }
