@@ -25,6 +25,21 @@ public class ConcentrationMean {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name="MeasuringTime")
+    private String MeasuringTime;
+
+    @Column(name="LotNumber")
+    private String LotNumber;
+    
+    @Column(name="WorkNumber")
+    private String WorkNumber;
+
+    @Column(name="Date")
+    private String Date;
+
+    @Column(name="Time")
+    private String Time;
+
     @Column(name="Au")
     private BigDecimal Au;
 

@@ -34,6 +34,13 @@ public class ConcentrationMeanFormatter implements Formatter {
             return null;
         }
 
-        return value;
+        // Elimina espacios, saltos de línea y tabulaciones
+        String limpio = value.replaceAll("[\\s\\n\\r\\t]", "");
+        // Busca el número decimal (puede adaptarse si usas coma o punto como separador decimal)
+        java.util.regex.Matcher matcher = java.util.regex.Pattern.compile("(\\d+[.,]?\\d*)").matcher(limpio);
+        if (matcher.find()) {
+            return matcher.group(1); // Devuelve el número encontrado
+        }
+        return ""; // Si no encuentra un número
     }
 }

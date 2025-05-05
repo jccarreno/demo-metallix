@@ -17,6 +17,116 @@
         "requestedFields": [
           {
             "type": "KEY_VALUE",
+            "fieldName": "MeasuringTime",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Measuring",
+                    "measuring"
+                  ],
+                  "sizeTransform": {
+                    "up": 1,
+                    "down": 0,
+                    "left": -2,
+                    "right": 5
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "LotNumber",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Lot",
+                    "lot"
+                  ],
+                  "sizeTransform": {
+                    "up": 1,
+                    "down": 0,
+                    "left": -2,
+                    "right": 5
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "WorkNumber",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Work",
+                    "work"
+                  ],
+                  "sizeTransform": {
+                    "up": 1,
+                    "down": 0,
+                    "left": -2,
+                    "right": 5
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "Date",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Date",
+                    "date"
+                  ],
+                  "sizeTransform": {
+                    "up": 1,
+                    "down": 0,
+                    "left": -2,
+                    "right": 5
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "fieldName": "Time",
+            "fieldData": {
+              "searchStrategies": [
+                {
+                  "synonyms": [
+                    "Time",
+                    "time"
+                  ],
+                  "sizeTransform": {
+                    "up": 1,
+                    "down": 0,
+                    "left": -2,
+                    "right": 5
+                  }
+                }
+              ],
+              "minLength": 1,
+              "exactMatch": true
+            }
+          },
+          {
+            "type": "KEY_VALUE",
             "fieldName": "Au",
             "fieldData": {
               "searchStrategies": [
@@ -26,10 +136,10 @@
                     "AU"
                   ],
                   "sizeTransform": {
-                    "up": -1,
-                    "down": 1,
-                    "left": 1.2,
-                    "right": 1.2
+                    "up": 1,
+                    "down": 3,
+                    "left": 2,
+                    "right": 2
                   }
                 }
               ],
@@ -48,10 +158,10 @@
                     "AG"
                   ],
                   "sizeTransform": {
-                    "up": -1,
-                    "down": 1,
-                    "left": 1.2,
-                    "right": 1.2
+                    "up": 1,
+                    "down": 3,
+                    "left": 2,
+                    "right": 2
                   }
                 }
               ],
@@ -70,10 +180,10 @@
                     "PT"
                   ],
                   "sizeTransform": {
-                    "up": -1,
-                    "down": 1,
-                    "left": 1.2,
-                    "right": 1.2
+                    "up": 1,
+                    "down": 3,
+                    "left": 2,
+                    "right": 2
                   }
                 }
               ],
@@ -92,10 +202,10 @@
                     "PD"
                   ],
                   "sizeTransform": {
-                    "up": -1,
-                    "down": 1,
-                    "left": 1.2,
-                    "right": 1.2
+                    "up": 1,
+                    "down": 3,
+                    "left": 2,
+                    "right": 2
                   }
                 }
               ],
@@ -114,10 +224,10 @@
                     "RH"
                   ],
                   "sizeTransform": {
-                    "up": -1,
-                    "down": 1,
-                    "left": 1.2,
-                    "right": 1.2
+                    "up": 1,
+                    "down": 3,
+                    "left": 2,
+                    "right": 2
                   }
                 }
               ],
@@ -136,10 +246,10 @@
                     "RU"
                   ],
                   "sizeTransform": {
-                    "up": -1,
-                    "down": 1,
-                    "left": 1.2,
-                    "right": 1.2
+                    "up": 1,
+                    "down": 3,
+                    "left": 2,
+                    "right": 2
                   }
                 }
               ],
@@ -158,10 +268,10 @@
                     "IR"
                   ],
                   "sizeTransform": {
-                    "up": -1,
-                    "down": 1,
-                    "left": 1.2,
-                    "right": 1.2
+                    "up": 1,
+                    "down": 3,
+                    "left": 2,
+                    "right": 2
                   }
                 }
               ],
@@ -180,10 +290,10 @@
                     "CU"
                   ],
                   "sizeTransform": {
-                    "up": -1,
-                    "down": 1,
-                    "left": 1.2,
-                    "right": 1.2
+                    "up": 1,
+                    "down": 3,
+                    "left": 2,
+                    "right": 2
                   }
                 }
               ],

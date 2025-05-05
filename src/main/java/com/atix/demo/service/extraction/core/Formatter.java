@@ -54,4 +54,9 @@ public interface Formatter extends Mappeable<String> {
      * @return the formatted value
      */
     String formatStringValue(String key, String value);
+
+    default String getCleanStringValue(Map<String, FieldResponse> responseMap, String key) {
+        String text = responseMap.getOrDefault(key, new FieldResponse()).getText();
+        return text.replaceAll("[\\s\\n\\r\\t]", "");
+    }
 }

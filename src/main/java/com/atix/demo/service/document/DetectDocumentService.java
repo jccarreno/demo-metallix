@@ -139,7 +139,7 @@ public class DetectDocumentService {
      * @return la ruta donde se almacenarán los resultados del OCR
      */
     private String buildPathForOcr(String idFile) {
-        return FOLDER_ROOT + SEPARATOR + "notas_credito" + SEPARATOR + idFile + SEPARATOR;
+        return FOLDER_ROOT + SEPARATOR + idFile + SEPARATOR;
     }
 
     /**

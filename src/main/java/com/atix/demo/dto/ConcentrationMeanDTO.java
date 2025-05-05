@@ -9,9 +9,19 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 public class ConcentrationMeanDTO {
-     private BigDecimal Au;
-
     
+    private String MeasuringTime;
+
+    private String LotNumber;
+    
+    private String WorkNumber;
+
+    private String Date;
+
+    private String Time;
+    
+    private BigDecimal Au;
+
     private BigDecimal Ag;
 
     private BigDecimal Pt;

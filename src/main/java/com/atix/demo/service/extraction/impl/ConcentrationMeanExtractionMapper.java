@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
  */
 @AllArgsConstructor
 @Component
-public class CreditNoteExtractionMapper implements ExtractionMapper {
+public class ConcentrationMeanExtractionMapper implements ExtractionMapper {
 
     private final FormatterBus formatterBus;
 
@@ -63,6 +63,11 @@ public class CreditNoteExtractionMapper implements ExtractionMapper {
 
         // Mapea las respuestas a un DTO
         ConcentrationMeanDTO data = new ConcentrationMeanDTO();
+        data.setMeasuringTime(formatter.getCleanStringValue(responseMap, FieldNamesConcentrationMean.MEASURING_TIME));
+        data.setLotNumber(formatter.getCleanStringValue(responseMap, FieldNamesConcentrationMean.LOT_NUMBER));
+        data.setWorkNumber(formatter.getCleanStringValue(responseMap, FieldNamesConcentrationMean.WORK_NUMBER));
+        data.setDate(formatter.getCleanStringValue(responseMap, FieldNamesConcentrationMean.DATE));
+        data.setTime(formatter.getCleanStringValue(responseMap, FieldNamesConcentrationMean.TIME));
         data.setAg(convertToBigDecimal(formatter.getStringValue(responseMap, FieldNamesConcentrationMean.AG)));
         data.setAu(convertToBigDecimal(formatter.getStringValue(responseMap, FieldNamesConcentrationMean.AU)));
         data.setCu(convertToBigDecimal(formatter.getStringValue(responseMap, FieldNamesConcentrationMean.CU)));
