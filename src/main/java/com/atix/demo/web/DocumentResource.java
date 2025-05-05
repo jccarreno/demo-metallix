@@ -1,12 +1,20 @@
 package com.atix.demo.web;
 
 import lombok.AllArgsConstructor;
+
+import java.io.IOException;
+
+import org.springframework.data.util.Pair;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.atix.demo.dto.ConcentrationMeanDTO;
 import com.atix.demo.dto.DetectDocResponse;
 import com.atix.demo.dto.DetectUrlRequest;
+import com.atix.demo.dto.ExtRequestDTO;
+import com.atix.demo.dto.ExtResponseDTO;
 import com.atix.demo.service.document.DetectDocumentService;
+import com.atix.demo.service.extraction.core.GeneralExtractionService;
 
 
 @AllArgsConstructor
@@ -15,6 +23,7 @@ import com.atix.demo.service.document.DetectDocumentService;
 public class DocumentResource {
 
     private final DetectDocumentService detectDocumentService;
+    private final GeneralExtractionService generalExtractionService;
 
 
     @PostMapping("/upload-link")
@@ -22,5 +31,11 @@ public class DocumentResource {
         return ResponseEntity.ok(detectDocumentService.generateDetectDoc(detectUrlReq));
     }
 
+    @PostMapping("/extract")
+    public ResponseEntity<ExtResponseDTO> extract(@RequestBody ExtRequestDTO request)
+            throws IOException, InterruptedException {
+        Pair<ConcentrationMeanDTO, ExtResponseDTO> data = generalExtractionService.extractAndFormat(request, false);
+        return ResponseEntity.ok(data.getSecond());
+    }
 }
 

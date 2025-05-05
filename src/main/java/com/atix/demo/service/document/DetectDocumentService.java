@@ -111,7 +111,7 @@ public class DetectDocumentService {
         }
 
         ContentType type = info.getContentType();
-        if (type != ContentType.PDF && type != ContentType.MICROSOFT_EXCEL && type != ContentType.MICROSOFT_EXCEL_XML) {
+        if (type != ContentType.PDF && type != ContentType.MICROSOFT_EXCEL && type != ContentType.MICROSOFT_EXCEL_XML && type!=ContentType.PNG && type!=ContentType.JPEG) {
             throw new InvalidExtensionException("El tipo " + type.getMimeType() + " no es soportado por el sistema");
         }
     }
