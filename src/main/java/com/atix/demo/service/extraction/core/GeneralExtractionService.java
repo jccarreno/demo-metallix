@@ -148,7 +148,8 @@ public class GeneralExtractionService {
             // Generar el signedUrl
             String signedUrl = detectDocumentService.generateDownloadUrl(document.getFilePath());
             // Crear el DTO de respuesta
-            ExtResponseDTO responseDTO = new ExtResponseDTO(request.getIdFile(), data, signedUrl);
+            InputStream ocrResult=detectDocumentService.getOcrResult(request.getIdFile().toString());
+            ExtResponseDTO responseDTO = new ExtResponseDTO(request.getIdFile(), data, signedUrl, concentrationMeanService.getAverageConfidence(ocrResult), concentrationMeanService.getMinConfidence(ocrResult), concentrationMeanService.getMaxConfidence(ocrResult));
 
             return Pair.of(concentrationMeanDTO, responseDTO);
         } catch (DuplicateCreditNoteException e) {

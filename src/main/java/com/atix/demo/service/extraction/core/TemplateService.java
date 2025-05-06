@@ -27,7 +27,7 @@ import com.atix.demo.utils.extraction.InterfaceAdapter;
 @RequiredArgsConstructor
 @Service
 public class TemplateService {
-    private String TEMPLATES_DIRECTORY="C:/Users/juanc/Desktop/Atix/Demo metallix/demo-metallix/src/main/resources";
+    private String TEMPLATES_DIRECTORY="D:/Proyectos ATIX/Demo metallix/demo-metallix/src/main/resources";
     
     private final DocumentTemplateRepository documentTemplateRepository;
     private final Gson gson = new GsonBuilder().registerTypeAdapter(ROI.class, new InterfaceAdapter<ROI>()).create();

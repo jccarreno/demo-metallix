@@ -13,6 +13,7 @@ import com.atix.demo.dto.DetectDocResponse;
 import com.atix.demo.dto.DetectUrlRequest;
 import com.atix.demo.dto.ExtRequestDTO;
 import com.atix.demo.dto.ExtResponseDTO;
+import com.atix.demo.service.ConcentrationMeanService;
 import com.atix.demo.service.document.DetectDocumentService;
 import com.atix.demo.service.extraction.core.GeneralExtractionService;
 
@@ -24,6 +25,7 @@ public class DocumentResource {
 
     private final DetectDocumentService detectDocumentService;
     private final GeneralExtractionService generalExtractionService;
+    private final ConcentrationMeanService concentrationMeanService;
 
 
     @PostMapping("/upload-link")
